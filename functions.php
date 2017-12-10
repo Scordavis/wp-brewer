@@ -155,4 +155,5 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+add_theme_support('nav-menus'); if ( function_exists('register_nav_menus')) { register_nav_menus( array( 'main' => 'Main Nav' ) ); }
 

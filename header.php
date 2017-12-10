@@ -10,47 +10,59 @@
  */
 
 ?>
-<!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
+<!DOCTYPE html>
+<html lang="ru">
 
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title><?php bloginfo('name'); ?></title>
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'czech-brewer-club' ); ?></a>
+	<body>
+	<!-- header site -->
+	<header class="page-header">
+		<div class="container-fluid page-header" id="topper"><!-- top color border -->
+			<div class="container top-info-section">
+				<div class="col-md-5 col-sm-4 hidden-xs site-descript">
+					<p>Вкус вековых традиций</p>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-4 top-logo-wrap"><a href="index.html"><img src="img/logo-origin.png" title="На главную" alt="Клуб Чешских Пивоваров" class="img-responsive top-logo"></a></div>
+				<div class="col-md-5 col-sm-4 col-xs-7 tel-wrap">
+					<p class="top-tel"><i class="ib-phone"></i>8(495)256-32-94</p>
+					<button class="callback-button" style="background-image: url(img/btn-plank.png)" data-fancybox="" data-src="#form-callback" data-fmetrika="" data-fhead="" data-finfo="">заказать столик</button>
+				</div>
+			</div>
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-list" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- <a class="navbar-brand visible-xs" href="#">Вкус вековых традиций</a> -->
+					</div>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'czech-brewer-club' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse brewer-top-navigation" id="collapse-list">
+						<ul class="nav navbar-nav brewer-top-nav">
+							<li class="active col-md-2"><a href="index.html#description">главная</li>
+							<li class="col-md-2"><a href="about.html#about-restaurant">о нас</a></li>
+							<li class="col-md-2"><a href="catalog.html#brewers">пиво</a></li>
+							<li class="col-md-2"><a href="menu.html#brewers">меню</a></li>
+							<li class="col-md-2"><a href="page.html">новости</a></li>
+							<li class="col-md-2"><a href="gallery.html#gallery">галерея</a></li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</div>
+	</header>
+	<!-- end header site -->
