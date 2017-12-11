@@ -144,6 +144,7 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/template-functions.php';
 
+
 /**
  * Customizer additions.
  */
@@ -157,3 +158,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 add_theme_support('nav-menus'); if ( function_exists('register_nav_menus')) { register_nav_menus( array( 'main' => 'Main Nav' ) ); }
 
+add_post_type_support( 'page', 'excerpt' );
