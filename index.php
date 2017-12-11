@@ -23,7 +23,11 @@ get_header(); ?>
 		<div class="container">
 			<img src="<?php echo get_template_directory_uri() ?>/img/venzel-yellow.png" alt="" class="divider">
 			<div class="col-md-5 about">
-				<?php get_page() ?>
+				<?php $id = 6; // add the ID of the page where the zero is
+				$p = get_page($id);
+				$t = $p->post_title;
+				echo apply_filters('the_excerpt', $p->post_content);
+				?>
 			</div>
 			<div class="col-lg-6 col-lg-offset-1 col-md-offset-1 col-md-6 news">
 				<div class="news-preview-wrapper">
