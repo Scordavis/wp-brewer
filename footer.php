@@ -14,16 +14,16 @@
 	
 
 	<!-- start page-footer -->
-	<footer class="container-fluid page-footer" style="background-image: url(img/bg-footer.jpg);">
+	<footer class="container-fluid page-footer" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/bg-footer.jpg);">
 		<div class="green-filter"></div>
 		<section class="container footer-content">
-			<a href="/"><img src="img/logo-white.png" alt="клуб чешских пивоваров" title="На главную"></a>
+			<a href="/"><img src="<?php echo get_template_directory_uri() ?>/img/logo-white.png" alt="клуб чешских пивоваров" title="На главную"></a>
 			<p class="footer-text site-title">Клуб Чешских Пивоваров</p>
 			<p class="footer-text tel">Тел: +7(495) 256-12-89</p>
 			<p class="footer-text adress">Москва, ул. Третьяковская, д122</p>
 			<p class="footer-text schedule">9:00-20:00<span>10:00-22:00</span></p>
 			<button class="footer-text read-more scheme-popup" data-fancybox="" data-src="#map-popup" >схема проезда</button>
-			<button class="callback-button footer-callback-button" style="background-image: url(img/btn-plank.png)" data-fancybox="" data-src="#form-callback" data-fmetrika="" data-fhead="" data-finfo="">заказать столик</button>
+			<button class="callback-button footer-callback-button" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/btn-plank.png)" data-fancybox="" data-src="#form-callback" data-fmetrika="" data-fhead="" data-finfo="">заказать столик</button>
 			<p class="footer-text socials">Мы в соцсетях<span><a href="https://vk.com/feed" target="_blank" class="ib-vk white-link"></a></span></p>
 			<p class="footer-text copyright">© 2017 Все права защищены</p>
 		</section>
@@ -31,7 +31,7 @@
 	<!-- end page-footer -->
 	<!-- start form modal -->
 	<div class="modal-form-wrapper" style="display: none;" id="form-callback">
-		<p class="form-brand-wrapper"><img src="img/logo-origin.png" alt="Клуб Чешских Пивоваров" class="form-brand"></p>
+		<p class="form-brand-wrapper"><img src="<?php echo get_template_directory_uri() ?>/img/logo-origin.png" alt="Клуб Чешских Пивоваров" class="form-brand"></p>
 		<div class="form-thanks">
 			<form class="popup-callback">
 				<h3>Оставьте заявку на заказ столика!</h3>

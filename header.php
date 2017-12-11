@@ -31,10 +31,10 @@
 				<div class="col-md-5 col-sm-4 hidden-xs site-descript">
 					<p>Вкус вековых традиций</p>
 				</div>
-				<div class="col-md-2 col-sm-4 col-xs-4 top-logo-wrap"><a href="index.html"><img src="img/logo-origin.png" title="На главную" alt="Клуб Чешских Пивоваров" class="img-responsive top-logo"></a></div>
+				<div class="col-md-2 col-sm-4 col-xs-4 top-logo-wrap"><a href="index.html"><img src="<?php echo get_template_directory_uri() ?>/img/logo-origin.png" title="На главную" alt="Клуб Чешских Пивоваров" class="img-responsive top-logo"></a></div>
 				<div class="col-md-5 col-sm-4 col-xs-7 tel-wrap">
 					<p class="top-tel"><i class="ib-phone"></i>8(495)256-32-94</p>
-					<button class="callback-button" style="background-image: url(img/btn-plank.png)" data-fancybox="" data-src="#form-callback" data-fmetrika="" data-fhead="" data-finfo="">заказать столик</button>
+					<button class="callback-button" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/btn-plank.png)" data-fancybox="" data-src="#form-callback" data-fmetrika="" data-fhead="" data-finfo="">заказать столик</button>
 				</div>
 			</div>
 			<nav class="navbar navbar-default">
