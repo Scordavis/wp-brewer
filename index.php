@@ -23,8 +23,7 @@ get_header(); ?>
 		<div class="container">
 			<img src="<?php echo get_template_directory_uri() ?>/img/venzel-yellow.png" alt="" class="divider">
 			<div class="col-md-5 about">
-				<article>Уже более 20 лет участники пивоваренного рынка рассматривают сочинский пивной форум как главную деловую площадку своей отрасли. Именно поэтому ежегодно все ведущие предприятия и новички рынка приезжают на «ПИВО» в Сочи, чтобы представить здесь свою продукцию, провести собственное мероприятие в рамках деловой программы, достойно презентовать свою компанию, оценить ситуацию на рынке, пообщаться со старыми друзьями и найти новых партнёров. </article>
-				<a href="about.html#about-restaurant" class="read-more">Читать далее</a>
+				<?php get_page() ?>
 			</div>
 			<div class="col-lg-6 col-lg-offset-1 col-md-offset-1 col-md-6 news">
 				<div class="news-preview-wrapper">
