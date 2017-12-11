@@ -45,6 +45,34 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 /* brewer */
 @font-face {
+  font-family: 'Alice';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Alice Regular'), local('Alice-Regular'), url(https://fonts.gstatic.com/s/alice/v9/acf9XsUhgp1k2j79ATk2cw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Mono'), local('PTMono-Regular'), url(https://fonts.gstatic.com/s/ptmono/v5/ePgFvqOCiLHhAQZDY_ploA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'PT Serif Caption';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Serif Caption'), local('PTSerif-Caption'), url(https://fonts.gstatic.com/s/ptserifcaption/v9/7xkFOeTxxO1GMC1suOUYWVRF2Zew_pgh0xNsNWxurqo.ttf) format('truetype');
+}
+
+@charset "UTF-8";
+
+/* brewer */
+@font-face {
   font-family: "brewer";
   src:url("https://file.myfontastic.com/b5C3X9kYBrwoHLeLnoTnTe/fonts/1512551530.eot");
   src:url("https://file.myfontastic.com/b5C3X9kYBrwoHLeLnoTnTe/fonts/1512551530.eot?#iefix") format("embedded-opentype"),
@@ -913,11 +941,19 @@ article {
   margin: 10px 0 10px 20px;
 }
 .main-section .partners {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 80px;
   padding-top: 80px;
   border-top: 1px solid #fcc855;
 }
-.main-section .partners a .ico-partner {
+.main-section .partners a img {
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   -ms-transition: 0.2s;
@@ -927,7 +963,7 @@ article {
   top: 0;
   margin: auto;
 }
-.main-section .partners a:hover .ico-partner {
+.main-section .partners a:hover img {
   top: -6px;
 }
 .main-section .gallery-wrapper {
@@ -2186,6 +2222,9 @@ article {
   .slider-container .slide__content .slide__content-wrap .slide__text .slide__text-heading {
     font-size: 6vw;
     line-height: 9vw;
+  }
+  .main-section .partners {
+    display: block;
   }
   .main-section .partners div a {
     display: block;
