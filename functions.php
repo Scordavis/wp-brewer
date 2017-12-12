@@ -159,3 +159,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 add_theme_support('nav-menus'); if ( function_exists('register_nav_menus')) { register_nav_menus( array( 'main' => 'Main Nav' ) ); }
 
 add_post_type_support( 'page', 'excerpt' );
+
+// Load up our awesome theme options
+require_once ( get_stylesheet_directory() . '/theme-options.php' );

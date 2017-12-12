@@ -11,21 +11,43 @@
 
 ?>
 
-	
 
-	<!-- start page-footer -->
-	<footer class="container-fluid page-footer" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/bg-footer.jpg);">
-		<div class="green-filter"></div>
-		<section class="container footer-content">
-			<a href="/"><img src="<?php echo get_template_directory_uri() ?>/img/logo-white.png" alt="клуб чешских пивоваров" title="На главную"></a>
-			<p class="footer-text site-title">Клуб Чешских Пивоваров</p>
-			<p class="footer-text tel">Тел: +7(495) 256-12-89</p>
-			<p class="footer-text adress">Москва, ул. Третьяковская, д122</p>
-			<p class="footer-text schedule">9:00-20:00<span>10:00-22:00</span></p>
+
+<!-- start page-footer -->
+<footer class="container-fluid page-footer" style="background-image: url(<?php echo get_field('footerbg', 80); ?>);">
+	
+	<div class="green-filter"></div>
+	<section class="container footer-content">
+		<a href=""><img src="<?php echo get_field('whitelogo', 80); ?>" alt="клуб чешских пивоваров" title="На главную"></a>
+		<p class="footer-text site-title"><?php echo get_bloginfo() ?></p>
+		<p class="footer-text tel">Тел:
+			<?php 
+			$options = get_option('sample_theme_options');
+			echo $options['phonetext'];?>
+		</p>
+		<p class="footer-text adress">
+			<?php 
+			$options = get_option('sample_theme_options');
+			echo $options['adress'];?>
+
+		</p>
+		<p class="footer-text schedule">
+			<?php 
+			$options = get_option('sample_theme_options');
+			echo $options['weekdays'];?>
+			<span>
+				<?php 
+				$options = get_option('sample_theme_options');
+				echo $options['weekends'];?></span>
+			</p>
 			<button class="footer-text read-more scheme-popup" data-fancybox="" data-src="#map-popup" >схема проезда</button>
-			<button class="callback-button footer-callback-button" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/btn-plank.png)" data-fancybox="" data-src="#form-callback" data-fmetrika="" data-fhead="" data-finfo="">заказать столик</button>
+			<button class="callback-button footer-callback-button" style="background-image: url(<?php echo get_field('buttonplank', 80); ?>)" data-fancybox="" data-src="#form-callback" data-fmetrika="" data-fhead="" data-finfo="">заказать столик</button>
 			<p class="footer-text socials">Мы в соцсетях<span><a href="https://vk.com/feed" target="_blank" class="ib-vk white-link"></a></span></p>
-			<p class="footer-text copyright">© 2017 Все права защищены</p>
+			<p class="footer-text copyright">
+				<?php 
+				$options = get_option('sample_theme_options');
+				echo $options['copyright'];?>					
+			</p>
 		</section>
 	</footer>
 	<!-- end page-footer -->
@@ -65,7 +87,8 @@
 	<!-- button scrolling to top page -->
 	<a data-scroll data-aos="fade-up" data-aos-duration="300" data-aos-offset="300" href="#topper" class="to-top"><p><i class="ib-up"></i>наверх</p></a>
 	<!-- end form modal -->
-	<!-- Bootstrap -->
+
+		<!-- Bootstrap -->
 	
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
@@ -78,6 +101,7 @@
 	<![endif]-->
 	<script src="<?php echo get_template_directory_uri(); ?>/js/libs.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
+
 	<?php wp_footer(); ?>
 </body>
 

@@ -18,28 +18,28 @@ get_header(); ?>
 	<?php get_template_part( 'template-parts/header', 'slider' ); ?>
 	<!-- end header-slider -->
 	<!-- main section -->
-	<main class="container-fluid main-section dark" id="description" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/bg-main-section.jpg);">
+	<main class="container-fluid main-section dark" id="description" style="background-image: url(<?php echo get_field('mainbg', 80); ?>);">
 		<div class="green-filter"></div>		
 		<div class="container">
-			<img src="<?php echo get_template_directory_uri() ?>/img/venzel-yellow.png" alt="" class="divider">
+			<img src="<?php echo get_field('lightvensel', 80); ?>" alt="" class="divider">
 			<div class="col-md-5 about">
 				<?php $id = 6; // add the ID of the page where the zero is
 				$p = get_page($id);
 				$t = $p->post_title;
 				echo apply_filters('the_excerpt', $p->post_excerpt);
 				?>
-				<a href="<?php the_permalink($id); ?>" class="read-more">Читать далее</a>	
+				<a href="<?php the_permalink($id); ?>" class="read-more"><?php echo get_field('readmorebtn', 80); ?></a>	
 			</div>
 			<div class="col-lg-6 col-lg-offset-1 col-md-offset-1 col-md-6 news">
 				<div class="news-preview-wrapper">
 					<h3>Субботнее мероприятие</h3>
 					<article>Дело было в 1843 году. Господин Якуб Пинкас –  портной, выполняющий, помимо прочего, пошив священнического облачения для францисканского монастыря, – прослышав о новом пиве, которое недавно начали варить на Мещанском пивоваренном заводе в Пльзене...</article>
-					<a href="single.html" class="read-more">Читать далее</a>	
+					<a href="single.html" class="read-more"><?php echo get_field('readmorebtn', 80); ?></a>	
 				</div>	
 				<div class="news-preview-wrapper">
 					<h3>Праздничное открытие!</h3>
 					<article>Ввиду того, что все они были очарованы в такой же степени, как и Пинкас, и всё больше находилось людей, желавших отведывать его снова и снова, Якуб Пинкас вскоре забросил портняжный промысел и стал трактирщиком...</article>
-					<a href="single-1.html" class="read-more">Читать далее</a>	
+					<a href="single-1.html" class="read-more"><?php echo get_field('readmorebtn', 80); ?></a>	
 				</div>	
 			</div>
 		</div>
@@ -49,9 +49,9 @@ get_header(); ?>
 	</main>
 	<!-- end main section -->
 	<!-- start menu-preview -->
-	<section class="container-fluid menu-preview" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/bg-yellow-noise.jpg);">
-		<img src="<?php echo get_template_directory_uri() ?>/img/venzel-dark.png" alt="" class="divider">
-		<div class="float-logo" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/logo-float.png);">
+	<section class="container-fluid menu-preview" style="background-image: url(<?php echo get_field('loyalbg', 80); ?>);">
+		<img src="<?php echo get_field('darkvensel', 80); ?>" alt="" class="divider">
+		<div class="float-logo" style="background-image: url(<?php echo get_field('bglogo', 80); ?>);">
 		</div>
 		<div class="container">
 			<div class="col-md-6 menu-preview-content">

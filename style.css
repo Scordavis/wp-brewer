@@ -1319,6 +1319,7 @@ article {
   overflow: hidden;
   width: 430px;
   height: 430px;
+  max-height: 80%;
   -webkit-background-size: contain;
           background-size: contain;
   background-repeat: no-repeat;
