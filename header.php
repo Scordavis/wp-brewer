@@ -20,6 +20,17 @@
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title><?php bloginfo('name'); ?></title>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<style>
+	.slider .slide .slide__content .slide__content-wrap .slide__text .slide__text-link{
+		color: <?php echo get_field('buton-color'); ?>;
+	}
+	.slider .slide .slide__content .slide__content-wrap .slide__text .slide__text-link:before {
+		background-color: <?php echo get_field('button-border'); ?>;
+	}
+	.slider .slide .slide__content .slide__content-wrap .slide__text .slide__text-link:after {
+		background-color: <?php echo get_field('button-border'); ?>;
+	}
+</style>
 	<?php wp_head(); ?>
 </head>
 

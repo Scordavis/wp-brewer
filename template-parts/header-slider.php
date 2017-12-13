@@ -4,32 +4,24 @@
 	<div class="slider-control right"></div>
 	<ul class="slider-pagi"></ul>
 	<div class="slider">
-		<!-- start slide -->
-		<div class="slide slide-0 active">
-			<div class="slide__bg" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/slide_1.jpg);"></div>
+		<?php
+			$id=4; // ID заданной рубрики
+			$n=5;   // количество выводимых записей
+			$recent = new WP_Query("cat=$id&showposts=$n"); 
+			while($recent->have_posts()) : $recent->the_post();
+		?>
+		<div class="slide active">
+			<div class="slide__bg" style="background-image: url(<?php echo get_field('slide-bg'); ?>);"></div>
 			<div class="slide__content">
 				<div class="container slide__content-wrap">
 					<section class="slide__text">
-						<h2 class="slide__text-heading">Новые поступления &mdash; <br>новые впечатления!</h2>
-						<p class="slide__text-desc"></p> <a href="catalog.html#brewers" class="slide__text-link">подробнее</a> 
+						<h2 class="slide__text-heading" style="color: <?php echo get_field('text-color'); ?>"><?php echo get_field('slide-text'); ?></h2>
+						<p class="slide__text-desc" style="color: <?php echo get_field('text-color'); ?>"></p> <a href="" class="slide__text-link" style="color: <?php echo get_field('text-color'); ?>"><i class="top-border-btn"></i><?php echo get_field('slide-btn'); ?><i class="bottom-border-btn"></i></a> 
 					</section>
 				</div>
 			</div>
 		</div>
-		<!-- end slide -->
-		<!-- start slide -->
-		<div class="slide slide-1 ">
-			<div class="slide__bg" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/slide_2.jpg);"></div>
-			<div class="slide__content">
-				<div class="container slide__content-wrap">
-					<section class="slide__text">
-						<h2 class="slide__text-heading">Лучшие предложения <br>только у нас!</h2>
-						<p class="slide__text-desc"></p> <a href="gallery.html#gallery" class="slide__text-link">перейти</a> 
-					</section>
-				</div>
-			</div>
-		</div>
-		<!-- end slide -->
-	</div>
+		<?php endwhile; ?>
+</div>
 </div>
 	<!-- end slider -->
