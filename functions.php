@@ -162,3 +162,25 @@ add_post_type_support( 'page', 'excerpt' );
 
 // Load up our awesome theme options
 require_once ( get_stylesheet_directory() . '/theme-options.php' );
+
+
+// Remove “Category, Tag, Author from the_archive_title
+add_filter( 'get_the_archive_title', function ($title) {
+
+    if ( is_category() ) {
+
+            $title = single_cat_title( '', false );
+
+        } elseif ( is_tag() ) {
+
+            $title = single_tag_title( '', false );
+
+        } elseif ( is_author() ) {
+
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+
+        }
+
+    return $title;
+
+});

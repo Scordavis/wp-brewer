@@ -24,12 +24,6 @@
 	.slider .slide .slide__content .slide__content-wrap .slide__text .slide__text-link{
 		color: <?php echo get_field('buton-color'); ?>;
 	}
-	.slider .slide .slide__content .slide__content-wrap .slide__text .slide__text-link:before {
-		background-color: <?php echo get_field('button-border'); ?>;
-	}
-	.slider .slide .slide__content .slide__content-wrap .slide__text .slide__text-link:after {
-		background-color: <?php echo get_field('button-border'); ?>;
-	}
 </style>
 	<?php wp_head(); ?>
 </head>

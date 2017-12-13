@@ -31,16 +31,22 @@ get_header(); ?>
 				<a href="<?php the_permalink($id); ?>" class="read-more"><?php echo get_field('readmorebtn', 80); ?></a>	
 			</div>
 			<div class="col-lg-6 col-lg-offset-1 col-md-offset-1 col-md-6 news">
-				<div class="news-preview-wrapper">
-					<h3>Субботнее мероприятие</h3>
-					<article>Дело было в 1843 году. Господин Якуб Пинкас –  портной, выполняющий, помимо прочего, пошив священнического облачения для францисканского монастыря, – прослышав о новом пиве, которое недавно начали варить на Мещанском пивоваренном заводе в Пльзене...</article>
-					<a href="single.html" class="read-more"><?php echo get_field('readmorebtn', 80); ?></a>	
-				</div>	
-				<div class="news-preview-wrapper">
-					<h3>Праздничное открытие!</h3>
-					<article>Ввиду того, что все они были очарованы в такой же степени, как и Пинкас, и всё больше находилось людей, желавших отведывать его снова и снова, Якуб Пинкас вскоре забросил портняжный промысел и стал трактирщиком...</article>
-					<a href="single-1.html" class="read-more"><?php echo get_field('readmorebtn', 80); ?></a>	
-				</div>	
+				
+				<?php
+   $id=5; // ID заданной рубрики
+   $n=2;   // количество выводимых записей
+   $recent = new WP_Query("cat=$id&showposts=$n"); 
+   while($recent->have_posts()) : $recent->the_post();
+   	?>
+
+   	<div class="news-preview-wrapper">
+
+
+   		<h3><?php the_title( ) ?></h3>
+   		<article><?php the_excerpt() ?></article> 
+   		<a href="<?php the_permalink() ?>" class="read-more"><?php echo get_field('readmorebtn', 80); ?></a>	
+   </div>	
+   	<?php endwhile; ?>
 			</div>
 		</div>
 		<!-- start partners -->
