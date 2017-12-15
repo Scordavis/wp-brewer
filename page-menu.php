@@ -40,7 +40,7 @@ get_header(); ?>
 				<div class="row menu-tab-content">
 					<?php
 					   $id=7; // ID заданной рубрики
-					   $recent = new WP_Query("cat=$id"); 
+					   $recent = new WP_Query  (array('cat' => '$id', 'orderby' => 'date', 'order' => 'ASC' ));
 					   while($recent->have_posts()) : $recent->the_post(); ?> 
 					   <!-- start menu-tab-item -->
 				  <div class="col-md-6 menu-tab-item">
@@ -76,7 +76,7 @@ get_header(); ?>
 				   	</div>
 				   	<!-- end menu-row-item -->
 					</div>
-					<?php if ($wp_query->current_post % 2 == 0) { ?>
+					<?php if ($recent->current_post % 2 == 0) { ?>
 					   	<!-- end menu-tab-item -->	 						   	
 			  </div>
 			   <!-- end row menu-tab-item -->
