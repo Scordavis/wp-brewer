@@ -17,10 +17,10 @@ get_header(); ?>
 	<?php get_template_part( 'template-parts/header', 'slider' ); ?>
 	<!-- end header-slider -->
 <!-- main section -->
-	<main class="container-fluid main-section dark pattern" id="about-restaurant" style="background-image: url(<?php echo the_field ('aboutbg'); ?>);">
+	<main class="container-fluid main-section dark pattern" id="about-restaurant" style="background-image: url(<?php echo the_field ('patternbg', 80); ?>);">
 		<!-- <div class="green-filter"></div>		 -->
 		<div class="container">
-			<img src="<?php echo the_field ('lightvensel'); ?>" alt="" class="divider">
+			<img src="<?php echo the_field ( 'lightvensel', 80 ); ?>" alt="" class="divider">
 			<div class="col-md-12 about read-columns">				
 			<?php
 			while ( have_posts() ) : the_post();
@@ -39,8 +39,8 @@ get_header(); ?>
 	<!-- end main section -->
 	<!-- start menu-preview -->
 
-	<section class="container-fluid menu-preview" style="background-image: url(<?php echo the_field ('loyalbg'); ?>);">
-		<img src="<?php echo the_field ('darkvensel'); ?>" alt="" class="divider">
+	<section class="container-fluid menu-preview" style="background-image: url(<?php echo the_field ('loyalbg', 80 ); ?>);">
+		<img src="<?php echo the_field ('darkvensel, 80'); ?>" alt="" class="divider">
 		<div class="float-logo" style="background-image: url(<?php echo the_field ('bg_logo'); ?>);">
 		</div>
 		<div class="container">

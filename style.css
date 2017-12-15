@@ -44,6 +44,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @charset "UTF-8";
 
 /* brewer */
+
 @font-face {
   font-family: 'Alice';
   font-style: normal;
@@ -261,6 +262,12 @@ body {
   color: #fcc855;
   border-bottom: 1px dashed #fcc855;
 }
+.wrapper-thumb {
+  height: 262px;
+  width: 262px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .page-header {
   margin: 0;
   border: none;
@@ -277,7 +284,7 @@ body {
 .page-header .top-info-section .site-descript {
   position: relative;
   top: 60px;
-  left: 30px;
+  left: 0;
   text-align: left;
   font-style: italic;
   font-weight: 500;
@@ -296,7 +303,7 @@ body {
 .page-header .top-info-section .tel-wrap {
   position: relative;
   top: 20px;
-  right: 30px;
+  right: 0;
   text-align: right;
 }
 .page-header .top-info-section .tel-wrap .top-tel {
@@ -328,9 +335,29 @@ body {
   position: relative;
   top: -10px;
 }
+.page-header .brewer-top-navigation:before {
+  display: none;
+}
+.page-header .brewer-top-navigation:after {
+  display: none;
+}
 .page-header .brewer-top-navigation .brewer-top-nav {
   width: 100%;
   float: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.page-header .brewer-top-navigation .brewer-top-nav:before {
+  display: none;
+}
+.page-header .brewer-top-navigation .brewer-top-nav:after {
+  display: none;
 }
 .page-header .brewer-top-navigation .brewer-top-nav li {
   text-align: center;
@@ -354,15 +381,15 @@ body {
 .page-header .brewer-top-navigation .brewer-top-nav a:hover {
   color: white;
 }
-.page-header .brewer-top-navigation .brewer-top-nav .active {
+.page-header .brewer-top-navigation .brewer-top-nav .current-menu-item {
   position: relative;
 }
-.page-header .brewer-top-navigation .brewer-top-nav .active a {
+.page-header .brewer-top-navigation .brewer-top-nav .current-menu-item a {
   position: relative;
   background-color: transparent;
   font-weight: 700;
 }
-.page-header .brewer-top-navigation .brewer-top-nav .active a:before {
+.page-header .brewer-top-navigation .brewer-top-nav .current-menu-item a:before {
   display: block;
   position: absolute;
   top: -4px;
@@ -371,10 +398,10 @@ body {
   height: 4px;
   background-color: #014c20;
 }
-.page-header .brewer-top-navigation .brewer-top-nav .active a:hover {
+.page-header .brewer-top-navigation .brewer-top-nav .current-menu-item a:hover {
   color: #014c20;
 }
-.page-header .brewer-top-navigation .brewer-top-nav .active a:focus {
+.page-header .brewer-top-navigation .brewer-top-nav .current-menu-item a:focus {
   background-color: transparent;
 }
 svg {
@@ -624,6 +651,9 @@ svg {
 .slide__content .slide__content-wrap .slide__text .slide__text-link {
   z-index: 5;
   display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   position: relative;
   color: #844a17;
   font-size: 30px;
@@ -1375,6 +1405,7 @@ article {
 }
 .recommended-wrapper .recommended a .recommended-article {
   text-align: center;
+  margin-bottom: 0;
 }
 .recommended-wrapper .recommended a .recommended-article img {
   border: 2px solid transparent;
@@ -1634,7 +1665,7 @@ article {
   }
   .page-header .top-info-section .tel-wrap {
     top: 10px;
-    right: 30px;
+    right: 0;
   }
   .page-header .top-info-section .tel-wrap .top-tel {
     font-size: 20px;
@@ -1655,6 +1686,12 @@ article {
   }
   .page-header .brewer-top-navigation {
     top: -10px;
+  }
+  .page-header .brewer-top-navigation .brewer-top-nav:before {
+    display: none;
+  }
+  .page-header .brewer-top-navigation .brewer-top-nav:after {
+    display: none;
   }
   .page-header .brewer-top-navigation .brewer-top-nav a {
     text-transform: uppercase;
@@ -1862,8 +1899,14 @@ article {
   .yellow-divider-block {
     padding: 50px 0;
   }
+  .recommended-wrapper .recommended a {
+    letter-spacing: 1px;
+  }
+  .recommended-wrapper .recommended a .recommended-article {
+    text-align: center;
+    margin-bottom: 40px;
+  }
   .slide__content .slide__content-wrap .slide__text .slide__text-link {
-    background-color: #844a17;
     color: white;
     padding: 4px 10px;
   }
@@ -1964,22 +2007,32 @@ article {
     font-style: italic;
     font-weight: 500;
   }
-  .page-header #topper .navbar .container .navbar-collapse {
+  .page-header #topper .navbar .container .brewer-top-navigation {
     background-color: #fcc855;
     position: relative;
     margin-top: 5px;
     z-index: 4;
     border: none;
   }
-  .page-header #topper .navbar .container .navbar-collapse .navbar-nav {
+  .page-header #topper .navbar .container .brewer-top-navigation .brewer-top-nav {
     padding-top: 10px;
     padding-bottom: 10px;
     margin: auto;
     overflow: hidden;
+    display: block;
   }
-  .page-header #topper .navbar .container .navbar-collapse .navbar-nav li {
+  .page-header #topper .navbar .container .brewer-top-navigation .brewer-top-nav li {
     margin-top: 4px;
     margin-bottom: 4px;
+  }
+  .page-header #topper .navbar .container .brewer-top-navigation .brewer-top-nav .current-menu-item a:before {
+    display: none;
+  }
+  .page-header #topper .navbar .container .brewer-top-navigation .brewer-top-nav .current-menu-item a:hover {
+    color: #014c20;
+  }
+  .page-header #topper .navbar .container .brewer-top-navigation .brewer-top-nav .current-menu-item a:focus {
+    background-color: transparent;
   }
   .main-section .partners a {
     display: block;
@@ -2144,6 +2197,21 @@ article {
     border: none;
     margin-bottom: 0;
   }
+  .slide__content .slide__content-wrap .slide__text {
+    width: 100%;
+    text-align: center;
+  }
+  .slide__content .slide__content-wrap .slide__text .slide__text-link {
+    margin: auto;
+    color: white;
+    padding: 4px 10px;
+  }
+  .slide__content .slide__content-wrap .slide__text .slide__text-link .top-border-btn {
+    display: none;
+  }
+  .slide__content .slide__content-wrap .slide__text .slide__text-link .bottom-border-btn {
+    display: none;
+  }
   .menu-preview {
     padding-top: 80px;
     padding-bottom: 40px;
@@ -2175,6 +2243,7 @@ article {
   }
   .recommended-wrapper .recommended a .recommended-article {
     text-align: center;
+    margin-bottom: 40px;
   }
   .recommended-wrapper .recommended a .recommended-article figcaption {
     max-width: 80%;

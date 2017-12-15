@@ -53,3 +53,10 @@
 		</main>
 	</div>
 </section><!-- #post-<?php the_ID(); ?> -->
+	<div class="container-fluid menu-preview recommended-wrapper" style="background-image: url(<?php echo get_field('loyalbg', 80); ?>);">	
+		<div class="container recommended">
+			<h3>Другие новости</h3>
+			<?php get_template_part( 'template-parts/content', 'related' ); ?>
+		</div>
+	</div>
+

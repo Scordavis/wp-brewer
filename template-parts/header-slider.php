@@ -16,7 +16,9 @@
 				<div class="container slide__content-wrap">
 					<section class="slide__text">
 						<h2 class="slide__text-heading" style="color: <?php echo get_field('text-color'); ?>"><?php echo get_field('slide-text'); ?></h2>
-						<p class="slide__text-desc" style="color: <?php echo get_field('text-color'); ?>"></p> <a href="" class="slide__text-link" style="color: <?php echo get_field('buton-color'); ?>"><i class="top-border-btn" style="background-color: <?php echo get_field('buton-color'); ?>"></i><?php echo get_field('slide-btn'); ?><i class="bottom-border-btn" style="background-color: <?php echo get_field('buton-color'); ?>"></i></a> 
+						<p class="slide__text-desc" style="color: <?php echo get_field('text-color'); ?>"></p> 
+						<a href="" class="slide__text-link visible-md visible-lg" style="color: <?php echo get_field('buton-color'); ?>"><i class="top-border-btn" style="background-color: <?php echo get_field('buton-color'); ?>"></i><?php echo get_field('slide-btn'); ?><i class="bottom-border-btn" style="background-color: <?php echo get_field('buton-color'); ?>"></i></a> 
+						<a href="" class="slide__text-link visible-sm visible-xs" style="color: <?php echo get_field('buton-color'); ?>; background-color: <?php echo get_field('slide-button-bg'); ?>"><?php echo get_field('slide-btn'); ?></a> 
 					</section>
 				</div>
 			</div>
