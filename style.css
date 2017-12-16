@@ -880,10 +880,11 @@ article {
 }
 .thumb {
   max-width: 262px;
-  height: auto;
+  height: 262px;
   border: 1px solid white;
   float: left;
   margin: 0 20px 0px 0;
+  object-fit: cover;
 }
 .main-section {
   position: relative;
@@ -946,6 +947,10 @@ article {
   margin-bottom: 0;
 }
 .main-section .news-list .news-preview-wrapper img {
+  width: 260px;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
   float: left;
   margin-right: 30px;
   margin-top: 5px;

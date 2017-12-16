@@ -61,16 +61,16 @@ get_header(); ?>
 		</div>
 		<div class="container">
 			<div class="col-md-6 menu-preview-content">
-				<h3>Меню кухни</h3>
-				<img src="<?php echo get_template_directory_uri() ?>/img/thumb-kitchen.jpg" alt="меню кухни Клуба Чешских Пивоваров" class="thumb">
-				<p>Мы выполняем любые пожелания наших гостей, и знаем, как организовать свадьбу, юбилей, банкет, фуршет или корпоративную встречу. Наша задача — приятно удивить вас, предложить что-то интересное и сделать так, чтобы Ваш праздник запомнился Вам надолго.Если у вас большой праздник, и вы хотите его отметить, обращайтесь к нам. <br><br>Наш просторный Банкетный зал может вместить всех желающих (220 гостей для фуршета и до 180 гостей для банкета). Мы организуем торжественный ужин, создадим обстановку по вашему желанию. </p>
-				<a href="menu.html#kitchen" id="menulink" class="button-link">подробнее</a>
+				<h3><?php echo get_cat_name( 7 ) ?></h3>
+				<img src="<?php echo get_field('main-kitchen-thumb', 151); ?>" class="thumb">
+				<?php echo category_description( 7 ); ?> 
+				<a href="/menu#kitchen" id="menulink" class="button-link"><?php echo get_field('text-kitchen-btn', 151); ?></a>
 			</div>
 			<div class="col-md-6 menu-preview-content">
-				<h3>Меню бара</h3>
-				<img src="<?php echo get_template_directory_uri() ?>/img/thumb-pub.jpg" alt="меню бара Клуба Чешских Пивоваров" class="thumb">
-				<p>Вы любите с друзьями собираться для просмотра футбольных матчей и других спортивных мероприятий? Специально для Вас - наша закрытая терраса, оборудованная большими и качественными телевизионными системами - где бы Вы не сидели, Вы не пропустите ни одного интересного момента! <br><br>У Вас особое событие и Вы хотели бы провести вечер с близким Вам человеком? Нет проблем - к Вашим услугам уютный Малый зал на втором этаже. В этом зале может удобно расположиться и довольно большая компания друзей.</p>
-				<a href="menu.html#pub" id="publink" class="button-link">подробнее</a>
+				<h3><?php echo get_cat_name( 8 ) ?></h3>
+				<img src="<?php echo get_field('main-pub-thumb', 151); ?>" class="thumb">
+				<?php echo category_description( 8 ); ?>
+				<a href="/menu#pub" id="publink" class="button-link"><?php echo get_field('text-pub-btn', 151); ?></a>
 			</div>
 		</div>
 	</section>
