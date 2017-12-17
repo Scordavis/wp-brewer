@@ -31,7 +31,7 @@
 				<div class="col-md-5 col-sm-4 hidden-xs site-descript">
 					<p><?php echo get_bloginfo( 'description' ); ?></p>
 				</div>
-				<div class="col-md-2 col-sm-4 col-xs-4 top-logo-wrap"><a href="index.html"><img src="<?php echo the_field ('mainlogo', 80 ); ?>" class="img-responsive top-logo"></a></div>
+				<div class="col-md-2 col-sm-4 col-xs-4 top-logo-wrap"><a href="<?php echo home_url(); ?>"><img src="<?php echo the_field ('mainlogo', 80 ); ?>" class="img-responsive top-logo"></a></div>
 				<div class="col-md-5 col-sm-4 col-xs-7 tel-wrap">
 					<p class="top-tel"><i class="ib-phone"></i>
 						<?php 

@@ -39,13 +39,13 @@ get_header(); ?>
 	<!-- end main section -->
 	<!-- start menu-preview -->
 
-	<section class="container-fluid menu-preview" style="background-image: url(<?php echo the_field ('loyalbg', 80 ); ?>);">
-		<img src="<?php echo the_field ('darkvensel', 80); ?>" alt="" class="divider">
-		<div class="float-logo" style="background-image: url(<?php echo the_field ('bg_logo'); ?>);">
+	<section class="container-fluid menu-preview" style="background-image: url(<?php echo the_field ('loyalbg', 6 ); ?>);">
+		<img src="<?php echo the_field ('darkvensel', 6); ?>" alt="" class="divider">
+		<div class="float-logo" style="background-image: url(<?php echo the_field ('bg_logo', 6); ?>);">
 		</div>
 		<div class="container">
 			<div class="col-md-12 menu-preview-content loyalty">
-				<?php echo the_field ('loyality_terms'); ?>
+				<?php echo the_field ('loyality_terms', 6); ?>
 			</div>
 		</div>
 	</section>

@@ -971,13 +971,15 @@ article {
 .main-section .post img {
   border: 2px solid white;
 }
-.main-section .post .left-floating {
+.main-section .post .alignleft {
   float: left;
   margin: 10px 20px 10px 0;
+  max-width: 100%;
 }
-.main-section .post .right-floating {
+.main-section .post .alignright {
   float: right;
   margin: 10px 0 10px 20px;
+  max-width: 100%;
 }
 .main-section .partners {
   display: -webkit-box;
@@ -2065,11 +2067,11 @@ article {
   .main-section .post img {
     border: 2px solid white;
   }
-  .main-section .post .left-floating {
+  .main-section .post .alignleft {
     float: none;
     margin: 20px auto;
   }
-  .main-section .post .right-floating {
+  .main-section .post .alignright {
     float: none;
     margin: 20px auto;
   }

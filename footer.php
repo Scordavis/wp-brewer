@@ -18,7 +18,7 @@
 	
 	<div class="green-filter"></div>
 	<section class="container footer-content">
-		<a href=""><img src="<?php echo get_field('whitelogo', 80); ?>" alt="клуб чешских пивоваров"></a>
+		<a href="<?php echo home_url(); ?>"><img src="<?php echo get_field('whitelogo', 80); ?>" alt="клуб чешских пивоваров"></a>
 		<p class="footer-text site-title"><?php echo get_bloginfo() ?></p>
 		<p class="footer-text tel">Тел:
 			<?php 
