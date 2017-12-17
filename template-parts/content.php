@@ -49,6 +49,7 @@
 			</div><!-- .entry-content -->
 
 		</main>
+	<a href="../category/news/" class="read-more">Вернуться в раздел "Новости"</a>
 	</div>
 </section><!-- #post-<?php the_ID(); ?> -->
 	<div class="container-fluid menu-preview recommended-wrapper" style="background-image: url(<?php echo get_field('loyalbg', 80); ?>);">	

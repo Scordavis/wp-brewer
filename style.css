@@ -919,6 +919,9 @@ article {
 .main-section .news .news-preview-wrapper:last-child .read-more {
   margin-bottom: 10px;
 }
+.main-section .about h1 {
+  font-size: 30px;
+}
 .main-section .about article h4 {
   margin-top: 30px;
 }
