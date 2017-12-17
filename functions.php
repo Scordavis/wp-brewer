@@ -184,3 +184,9 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 
 });
+
+// crop excerpt lenght
+function new_excerpt_length($length) {
+	return 600;
+}
+add_filter('excerpt_length', 'new_excerpt_length');

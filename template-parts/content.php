@@ -12,12 +12,11 @@
 <section id="post-<?php the_ID(); ?>" <?php post_class('container-fluid main-section dark pattern'); ?> style="background-image: url(<?php echo get_field('patternbg', 80); ?>);">
 	<div class="container">
 		<main class="col-md-12 about post">
-			<header class="entry-header">
 				<?php
 				if ( is_singular() ) :
-					the_title( '<h2 class="entry-title">', '</h2>' );
+					the_title( '<h1 class="entry-title">', '</h1>' );
 				else :
-					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+					the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 				endif;
 
 				if ( 'post' === get_post_type() ) : ?>
@@ -26,7 +25,6 @@
 				</div><!-- .entry-meta -->
 				<?php
 				endif; ?>
-			</header><!-- .entry-header -->
 
 			<div class="entry-content">
 				<?php

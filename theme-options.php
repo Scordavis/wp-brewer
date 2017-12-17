@@ -102,6 +102,11 @@ function theme_options_do_page() {
 						<input id="sample_theme_options[adress]" class="regular-text" type="text" name="sample_theme_options[adress]" value="<?php esc_attr_e( $options['adress'] ); ?>" />		
 					</td>
 				</tr>
+				<tr valign="top"><th scope="row"><?php _e( 'Код карты', 'sampletheme' ); ?></th>
+					<td>
+						<input id="sample_theme_options[map]" class="regular-text" type="text" name="sample_theme_options[map]" value="<?php esc_attr_e( $options['map'] ); ?>" />		
+					</td>
+				</tr>
 				<tr valign="top"><th scope="row"><?php _e( 'Часы работы (будни)', 'sampletheme' ); ?></th>
 					<td>
 						<input id="sample_theme_options[weekdays]" class="regular-text" type="text" name="sample_theme_options[weekdays]" value="<?php esc_attr_e( $options['weekdays'] ); ?>" />		

@@ -884,7 +884,8 @@ article {
   border: 1px solid white;
   float: left;
   margin: 0 20px 0px 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-section {
   position: relative;
@@ -910,9 +911,10 @@ article {
 .main-section .news .news-preview-wrapper {
   padding-left: 44px;
 }
-.main-section .news .news-preview-wrapper h3 {
+.main-section .news .news-preview-wrapper h2 {
   margin-top: 0;
   clear: both;
+  font-size: 24px;
 }
 .main-section .news .news-preview-wrapper:last-child .read-more {
   margin-bottom: 10px;
@@ -1005,7 +1007,7 @@ article {
 }
 .main-section .gallery-wrapper .gallery-item {
   height: 255px;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   background-color: black;
   -webkit-background-clip: content-box;
           background-clip: content-box;
@@ -1365,7 +1367,7 @@ article {
 .menu-preview .container .menu-preview-content {
   color: #292929;
 }
-.menu-preview .container .menu-preview-content h3 {
+.menu-preview .container .menu-preview-content h2 {
   margin-bottom: 20px;
   font-size: 36px;
   text-transform: uppercase;
@@ -1468,6 +1470,19 @@ article {
   position: relative;
   top: 4px;
   font-size: 18px;
+}
+.page-footer .footer-content .socials span img {
+  width: auto;
+  max-width: 20px;
+  position: relative;
+  top: 4px;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.page-footer .footer-content .socials span img:hover {
+  top: 0;
 }
 .page-footer .footer-content .footer-callback-button {
   width: 204px;

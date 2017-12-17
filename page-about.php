@@ -40,7 +40,7 @@ get_header(); ?>
 	<!-- start menu-preview -->
 
 	<section class="container-fluid menu-preview" style="background-image: url(<?php echo the_field ('loyalbg', 80 ); ?>);">
-		<img src="<?php echo the_field ('darkvensel, 80'); ?>" alt="" class="divider">
+		<img src="<?php echo the_field ('darkvensel', 80); ?>" alt="" class="divider">
 		<div class="float-logo" style="background-image: url(<?php echo the_field ('bg_logo'); ?>);">
 		</div>
 		<div class="container">

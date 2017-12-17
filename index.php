@@ -42,7 +42,7 @@ get_header(); ?>
    	<div class="news-preview-wrapper">
 
 
-   		<h3><?php the_title( ) ?></h3>
+   		<h2><?php the_title( ) ?></h2>
    		<article><?php the_excerpt() ?></article> 
    		<a href="<?php the_permalink() ?>" class="read-more"><?php echo get_field('readmorebtn', 80); ?></a>	
    </div>	
@@ -61,13 +61,13 @@ get_header(); ?>
 		</div>
 		<div class="container">
 			<div class="col-md-6 menu-preview-content">
-				<h3><?php echo get_cat_name( 7 ) ?></h3>
+				<h2><?php echo get_cat_name( 7 ) ?></h2>
 				<img src="<?php echo get_field('main-kitchen-thumb', 151); ?>" class="thumb">
 				<?php echo category_description( 7 ); ?> 
 				<a href="/menu#kitchen" id="menulink" class="button-link"><?php echo get_field('text-kitchen-btn', 151); ?></a>
 			</div>
 			<div class="col-md-6 menu-preview-content">
-				<h3><?php echo get_cat_name( 8 ) ?></h3>
+				<h2><?php echo get_cat_name( 8 ) ?></h2>
 				<img src="<?php echo get_field('main-pub-thumb', 151); ?>" class="thumb">
 				<?php echo category_description( 8 ); ?>
 				<a href="/menu#pub" id="publink" class="button-link"><?php echo get_field('text-pub-btn', 151); ?></a>
