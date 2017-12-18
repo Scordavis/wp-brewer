@@ -60,9 +60,9 @@ get_header(); ?>
 			<?php while ($query->have_posts()) : $query->the_post(); ?>   
 				<div class="panel panel-default">
 					<div class="panel-heading" role="tab" id="collapse-heading-<?php echo get_the_ID(); ?>">
-						<h4 class="panel-title">
+						<h3 class="panel-title">
 							<a role="button" data-toggle="collapse" class="collapse-button collapsed" data-parent="#pivovar-antos" href="#identy<?php echo get_the_ID(); ?>" aria-expanded="false" aria-controls="<?php echo get_the_ID(); ?>"><?php the_title(); ?><i class="rollover-icon">подробнее<span class="ib-chevron"></span></i></a>
-						</h4>
+						</h3>
 					</div>
 					<div id="identy<?php echo get_the_ID(); ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-<?php echo get_the_ID(); ?>">
 						<div class="panel-body">
