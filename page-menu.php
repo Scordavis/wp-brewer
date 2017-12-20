@@ -31,15 +31,15 @@ get_header(); ?>
 		<div id="menuContent" class="tab-content menu-tab-wrapper">
 
 			<div class="tab-pane menu-tab-content-wrapper in active" id="kitchen">
-				
+
 				<!-- start row menu-tab-item -->
 				<div class="row menu-tab-content">
 					<?php
 
-					$recent = new WP_Query(
-						array('cat' => '7', 'orderby' => 'date', 'order' => 'ASC' )
+					$kitchenMenu = new WP_Query(
+						array('cat' => '7', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => '100', )
 					);
-					while($recent->have_posts()) : $recent->the_post(); ?> 
+					while($kitchenMenu->have_posts()) : $kitchenMenu->the_post(); ?>
 					<!-- start menu-tab-item -->
 					<div class="col-md-6 menu-tab-item">
 						<!-- start menu-row-item -->
@@ -74,8 +74,8 @@ get_header(); ?>
 						</div>
 						<!-- end menu-row-item -->
 					</div>
-					<?php if ($recent->current_post % 2 != 0) { ?>
-					<!-- end menu-tab-item -->	 						   	
+					<?php if ($kitchenMenu->current_post % 2 != 0) { ?>
+					<!-- end menu-tab-item -->
 				</div>
 				<!-- end row menu-tab-item -->
 				<!-- start row menu-tab-item -->
@@ -94,10 +94,10 @@ get_header(); ?>
 			<div class="row menu-tab-content">
 				<?php
 
-				$recent = new WP_Query(
-					array('cat' => '8', 'orderby' => 'date', 'order' => 'ASC' )
+				$pubMenu = new WP_Query(
+					array('cat' => '8', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => '100', )
 				);
-				while($recent->have_posts()) : $recent->the_post(); ?> 
+				while($pubMenu->have_posts()) : $pubMenu->the_post(); ?>
 				<!-- start menu-tab-item -->
 				<div class="col-md-6 menu-tab-item">
 					<!-- start menu-row-item -->
@@ -132,8 +132,8 @@ get_header(); ?>
 					</div>
 					<!-- end menu-row-item -->
 				</div>
-				<?php if ($recent->current_post % 2 != 0) { ?>
-				<!-- end menu-tab-item -->	 						   	
+				<?php if ($pubMenu->current_post % 2 != 0) { ?>
+				<!-- end menu-tab-item -->
 			</div>
 			<!-- end row menu-tab-item -->
 			<!-- start row menu-tab-item -->
