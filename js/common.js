@@ -5,7 +5,7 @@
 // });
 
 $(document).ready(function() {
-	
+
 	// form switcher
 	// $('button[data-src="#form-callback"]').on('click', function() {
 	// 	var metrika = $(this).data('fmetrika');
@@ -29,8 +29,8 @@ $(document).ready(function() {
 
 	  // thanks modal remove
   $('.form-thanks > .thanks_wrapper > .thanks_text > .thanks_close').click(function() {
-  	$('.form-thanks > .thanks_wrapper').removeClass('active');	    
-		// $('.form-thanks > .thanks_wrapper').removeClass('active');	    
+  	$('.form-thanks > .thanks_wrapper').removeClass('active');
+		// $('.form-thanks > .thanks_wrapper').removeClass('active');
 	});
 
 
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
 	// AOS
 	AOS.init();
-	
+
 	// bootstrap-tabcollapse
 	$('#menuTabs').tabCollapse();
 
@@ -61,7 +61,7 @@ $(document).ready(function() {
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "js/mail.php", //Change
+			url: "/brewersclub.ru/wp-content/themes/czech-brewer-club/js/mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
 			$('.form-thanks .thanks_wrapper').addClass('active');
@@ -76,10 +76,10 @@ $(document).ready(function() {
 
 
 
- 
 
 
 
 
- 
+
+
 });
